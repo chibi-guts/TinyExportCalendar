@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <color name="box1">#f7b99a</color>
+    <color name="box2">#f38b71</color>
+    <color name="box3">#d53f32</color>
+
+    <color name="normal_green">#ffb5d750</color>
+    <color name="pale_green">#ffcfe787</color>
+
+    <array name="reds">
+        <item>@color/box1</item>
+        <item>@color/box2</item>
+        <item>@color/box3</item>
+    </array>
+</resources>

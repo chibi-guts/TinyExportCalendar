@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\Maria\Documents\GitHub\TinyExportCalendar\app\build\intermediates\pre-dexed\debug\itextpdf-5.5.1-54182a344f815c5dfc8167f2ddd86da7fcc04454.jar"
+        jar="C:\Users\Maria\Documents\GitHub\TinyExportCalendar\app\libs\itextpdf-5.5.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="081fee01fb0d7da7665261ac0e005f583985087d"/>
+    <item
+        dex="C:\Users\Maria\Documents\GitHub\TinyExportCalendar\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-e311e493b238b75da4095bd5ee7b69d76d73dc42.jar"
+        jar="C:\Program Files (x86)\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="C:\Users\Maria\Documents\GitHub\TinyExportCalendar\app\build\intermediates\pre-dexed\debug\classes-084af3be608f77260390cba48a8aed5fb789ecd6.jar"
+        jar="C:\Users\Maria\Documents\GitHub\TinyExportCalendar\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+
+</pre-dex-items>
