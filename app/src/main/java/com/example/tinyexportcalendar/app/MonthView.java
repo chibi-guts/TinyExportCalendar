@@ -1,7 +1,6 @@
 package com.example.tinyexportcalendar.app;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -9,13 +8,8 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,18 +33,18 @@ public class MonthView extends View {
 
     public MonthView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        rWidth = MainActivity.winWidth/10;
-        rHeigth = MainActivity.winHeight/15;
+        rWidth = MyFragment.winWidth/10;
+        rHeigth = MyFragment.winHeight/15;
     }
     public MonthView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        rWidth = MainActivity.winWidth/10;
-        rHeigth = MainActivity.winHeight/15;
+        rWidth = MyFragment.winWidth/10;
+        rHeigth = MyFragment.winHeight/15;
     }
     public MonthView(Context context) {
         super(context);
-        rWidth = MainActivity.winWidth/10;
-        rHeigth = MainActivity.winHeight/15;
+        rWidth = MyFragment.winWidth/10;
+        rHeigth = MyFragment.winHeight/15;
     }
 
     void setNums(int [] nums) {

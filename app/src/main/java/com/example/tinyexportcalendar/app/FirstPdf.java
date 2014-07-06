@@ -4,23 +4,7 @@ import android.graphics.Color;
 import android.os.Environment;
 import android.util.Log;
 
-import java.io.FileOutputStream;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
-import com.itextpdf.text.Anchor;
-import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chapter;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
@@ -32,6 +16,15 @@ import com.itextpdf.text.Section;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+
+import java.io.FileOutputStream;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 
 public class FirstPdf {
@@ -96,7 +89,7 @@ public class FirstPdf {
     private static PdfPTable createTable(int year)
             throws DocumentException {
         GregorianCalendar pdfRefCalendar = new GregorianCalendar();
-        pdfRefCalendar.set(Calendar.YEAR, MainActivity.YEAR_MIN+year);
+        pdfRefCalendar.set(Calendar.YEAR, MyFragment.YEAR_MIN+year);
         PdfPTable table = new PdfPTable(32);
         table.setHeaderRows(1);
         int color;
@@ -117,7 +110,7 @@ public class FirstPdf {
                 }
             }
 
-            PdfPCell c1 = new PdfPCell(new Phrase(MainActivity.monthNames[i], smallNormal));
+            PdfPCell c1 = new PdfPCell(new Phrase(MyFragment.monthNames[i], smallNormal));
             table.addCell(c1);
             table.setWidths(new int[]{2, 1,1,1,1,1,1,1,
                     1,1,1,1,1,1,1,1,
@@ -128,7 +121,7 @@ public class FirstPdf {
                 chosenFont = smallNormal;
                 color = Color.WHITE;
                 if(monthDates[j]>0)
-                    color = MainActivity.markingColors[monthDates[j]-1];
+                    color = MyFragment.markingColors[monthDates[j]-1];
                 if(j > monthBorders)
                     chosenFont = smallNormalWhite;
                 Phrase phrase = new Phrase(cutString(String.valueOf(j+1)), chosenFont);

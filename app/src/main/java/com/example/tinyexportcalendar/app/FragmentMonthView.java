@@ -51,18 +51,18 @@ public class FragmentMonthView extends Fragment {
         TextView textView = (TextView) rootView.findViewById(R.id.textview);
         monthView = (MonthView) rootView.findViewById(R.id.month_view);
         int deltaMon = getArguments().getInt(ARG_SECTION_NUMBER) -
-                ((MainActivity.fragmentsOwnCalendar.get(Calendar.YEAR)-MainActivity.YEAR_MIN)*12+MainActivity.fragmentsOwnCalendar.get(Calendar.MONTH));
-        MainActivity.fragmentsOwnCalendar.add(Calendar.MONTH, deltaMon);
-        Date myDate = MainActivity.fragmentsOwnCalendar.getTime();
+                ((MyFragment.fragmentsOwnCalendar.get(Calendar.YEAR)-MyFragment.YEAR_MIN)*12+MyFragment.fragmentsOwnCalendar.get(Calendar.MONTH));
+        MyFragment.fragmentsOwnCalendar.add(Calendar.MONTH, deltaMon);
+        Date myDate = MyFragment.fragmentsOwnCalendar.getTime();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy MMMM");
         textView.setText(dateFormat.format(myDate));
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
-        int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(MainActivity.winWidth, View.MeasureSpec.AT_MOST);
+        int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(MyFragment.winWidth, View.MeasureSpec.AT_MOST);
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
         textView.measure(widthMeasureSpec, heightMeasureSpec);
 
         monthView.setPosition(getArguments().getInt(ARG_SECTION_NUMBER));
-        monthView.setNums(fillNums(MainActivity.fragmentsOwnCalendar.getTime()));
+        monthView.setNums(fillNums(MyFragment.fragmentsOwnCalendar.getTime()));
         monthView.setDates(dayOfWeek, lastDayNum, maxPrevDay);
 
         rootView.setOnTouchListener(new OnDayTouchListener(
@@ -83,7 +83,7 @@ public class FragmentMonthView extends Fragment {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         GregorianCalendar referenceCalendar = new GregorianCalendar();
 
-        referenceCalendar.setTime(MainActivity.fragmentsOwnCalendar.getTime());
+        referenceCalendar.setTime(MyFragment.fragmentsOwnCalendar.getTime());
         referenceCalendar.set(Calendar.DAY_OF_MONTH, 1);
         dayOfWeek = referenceCalendar.get(Calendar.DAY_OF_WEEK);
         dayOfWeek = (dayOfWeek>1)? dayOfWeek-1 : 7;
@@ -160,13 +160,13 @@ public class FragmentMonthView extends Fragment {
                                                 String.valueOf(key) + '_' + TAGS[t], new HashSet<String>());
                                         Log.d("StringSet in ONTOUCH before", " "+allColored);
                                         if (allColored.contains(String.valueOf(pos))) {
-                                            if (MainActivity.curMarkingColor!=3 && t!=3)
+                                            if (MyFragment.curMarkingColor!=3 && t!=3)
                                                 allColored.remove(String.valueOf(pos));
-                                            if(MainActivity.curMarkingColor==3 && t==3)
+                                            if(MyFragment.curMarkingColor==3 && t==3)
                                                 allColored.remove(String.valueOf(pos));
                                             oldT = t;
                                         }
-                                        if (!allColored.contains(String.valueOf(pos)) && t == MainActivity.curMarkingColor && t != oldT) {
+                                        if (!allColored.contains(String.valueOf(pos)) && t == MyFragment.curMarkingColor && t != oldT) {
                                             allColored.add(String.valueOf(pos));
                                         }
                                         Log.d("StringSet in ONTOUCH after", " " + allColored);
@@ -190,11 +190,11 @@ public class FragmentMonthView extends Fragment {
         void invalidateNeighbours(int position){
             int[] positions = new int[]{position-1, position+1};
             for (int p:positions) {
-                FragmentMonthView myFrag = (FragmentMonthView) MainActivity.dAdapter.mFragments.get(p);
+                FragmentMonthView myFrag = (FragmentMonthView) MyFragment.dAdapter.mFragments.get(p);
                 myFrag.monthView.invalidate();
                 //Log.d("ONTOUCH invalidating", String.valueOf(position)+' '+String.valueOf(key)+' '
                 //+String.valueOf(myFrag.getArguments().getInt(ARG_SECTION_NUMBER)));
-                MainActivity.dAdapter.mFragments.set(p, myFrag);
+                MyFragment.dAdapter.mFragments.set(p, myFrag);
             }
         }
     }
