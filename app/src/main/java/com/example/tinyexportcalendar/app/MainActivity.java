@@ -14,7 +14,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -121,7 +120,7 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -134,7 +133,7 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     /* Checks if external storage is available for read and write */
     public static boolean isExternalStorageWritable() {
@@ -166,9 +165,6 @@ public class MainActivity extends ActionBarActivity {
         return super.onPrepareOptionsMenu(menu);
     }
 
-
-
-
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
@@ -185,6 +181,7 @@ public class MainActivity extends ActionBarActivity {
                 FragmentTransaction mFT = getFragmentManager().beginTransaction();
                         //.hide(getFragmentManager().findFragmentById(R.id.main_content_frag))
                 mFT
+                        .hide(getFragmentManager().findFragmentById(R.id.main_content_frag))
                         .remove(fr)
                         .add(R.id.main_frame_container, new PrefsFragment())
                         .addToBackStack(null)

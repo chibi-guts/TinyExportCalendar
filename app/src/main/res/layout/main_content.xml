@@ -8,6 +8,12 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.tinyexportcalendar.app.MainActivity">
 
+
+    <com.example.tinyexportcalendar.app.BorderFlowerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fl_view"
+        />
     <FrameLayout
         android:id="@+id/container"
         android:layout_above="@+id/buttons_container"
@@ -30,20 +36,19 @@
         android:layout_alignParentBottom="true">
         <Button
             android:id="@+id/colbut1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/colbut2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/colbut3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/colbut4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_launcher"/>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </RelativeLayout>

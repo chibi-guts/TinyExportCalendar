@@ -36,6 +36,7 @@ public class FragmentMonthView extends Fragment {
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -46,8 +47,8 @@ public class FragmentMonthView extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_layout, container, false);
-        LinearLayout layout = (LinearLayout)rootView.findViewById(R.layout.fragment_layout);
+        View rootView = inflater.inflate(R.layout.fragment_month_layout, container, false);
+        LinearLayout layout = (LinearLayout)rootView.findViewById(R.layout.fragment_month_layout);
         TextView textView = (TextView) rootView.findViewById(R.id.textview);
         monthView = (MonthView) rootView.findViewById(R.id.month_view);
         int deltaMon = getArguments().getInt(ARG_SECTION_NUMBER) -

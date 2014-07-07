@@ -75,7 +75,10 @@ public class MyFragment extends Fragment {
         colBtns[3] = (Button) view.findViewById(R.id.colbut4);
         setButtons();
 
+        BorderFlowerView bFV = (BorderFlowerView) view.findViewById(R.id.fl_view);
+
         final VerticalViewPager verticalViewPager = (VerticalViewPager) view.findViewById(R.id.verticalviewpager);
+        //dAdapter = new DummyAdapter(getChildFragmentManager());
         dAdapter = new DummyAdapter(getFragmentManager());
         verticalViewPager.setAdapter(dAdapter);
         verticalViewPager.setOffscreenPageLimit(1);
@@ -130,6 +133,7 @@ public class MyFragment extends Fragment {
                 currentPosition = position;
                 Date myDate = myCalendar.getTime();
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                //Log.d("mFragments size", String.valueOf(dAdapter.mFragments.size()));
                 /*File myDatesFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
                         +"/documents/mydatesfile.txt");
                 FileWriter myWriter;
@@ -189,6 +193,7 @@ public class MyFragment extends Fragment {
         for(int i=0; i < colBtns.length; i++){
             colBtns[i].setOnClickListener(new OnColorsClickListner());
             if(i<colBtns.length-1)  colBtns[i].setBackgroundColor(markingColors[i]);
+            Log.d("MyFragment winWidth", String.valueOf(winWidth));
             colBtns[i].setWidth((int)winWidth/10);
             colBtns[i].setHeight((int) winWidth/10);
         }
@@ -200,7 +205,9 @@ public class MyFragment extends Fragment {
         Log.d("mainActivity drawSymbol", String.valueOf(width) + ' ' + String.valueOf((int) width));
         Bitmap myBitmap = Bitmap.createBitmap((int)width, (int)width, Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(myBitmap);
+        canvas.drawColor(Color.LTGRAY);
         MonthView.drawSymbol(canvas, getResources(), width*0.9f, width*0.05f, width*0.05f);
+        MonthView.drawSymbol(canvas, getResources(), width*0.95f, width*0.0474f, width*0.0474f);
         BitmapDrawable bd = new BitmapDrawable(getResources(), myBitmap);
         return bd;
     }
