@@ -20,7 +20,7 @@ public class BorderFlowerView extends View {
     private int mCurrent = 0;
     private int mNext = 1;
     float[] rads = new float[]{15.0f,30.0f,45.0f,60.0f,70.0f,80.0f,90.0f,100.0f,105.0f,110.0f};
-    float curOffset=0;
+    private float curOffset=0;
 
     public BorderFlowerView(Context context) {
         super(context);
@@ -51,13 +51,16 @@ public class BorderFlowerView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         Paint outlPaint = new Paint();
         outlPaint.setColor(Color.BLACK);
         outlPaint.setStrokeWidth(5.0f);
         outlPaint.setStyle(Paint.Style.STROKE);
         outlPaint.setStrokeCap(Paint.Cap.ROUND);
         canvas.drawPath(generateCaulisPath(), outlPaint);
-        canvas.drawCircle(50f, 150f, rads[4]*(1-curOffset), outlPaint);
+        if (curOffset >= 0.5f);
+        float offsetFactor = Math.abs(curOffset*2 - 1);
+        canvas.drawCircle(50f, 150f, rads[4]*offsetFactor, outlPaint);
 //        if(elem_x)
 
         // Frames 0, 1 is the first pause.
