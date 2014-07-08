@@ -13,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -75,7 +76,7 @@ public class MyFragment extends Fragment {
         colBtns[3] = (Button) view.findViewById(R.id.colbut4);
         setButtons();
 
-        BorderFlowerView bFV = (BorderFlowerView) view.findViewById(R.id.fl_view);
+        final BorderFlowerView bFV = (BorderFlowerView) view.findViewById(R.id.fl_view);
 
         final VerticalViewPager verticalViewPager = (VerticalViewPager) view.findViewById(R.id.verticalviewpager);
         //dAdapter = new DummyAdapter(getChildFragmentManager());
@@ -120,10 +121,24 @@ public class MyFragment extends Fragment {
         verticalViewPager.setCurrentItem(initialPosition);
         verticalViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             int positionOld;
+            //int direction;
+            //float offsetOld = 0;
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 positionOld = position;
+                VelocityTracker curVel = verticalViewPager.mVelocityTracker;
+                Log.d("MyFragment onPageScrolled pos offset offsetpx", String.valueOf(position)
+                        +' '+String.valueOf(positionOffset)
+                        +' '+String.valueOf(positionOffsetPixels));
+                /*if(verticalViewPager.mVelocityTracker!=null){
+                    curVel = verticalViewPager.mVelocityTracker;
+                    curVel.computeCurrentVelocity(1000);
+                    Log.d("MyFragment onPageScrolled offsetpx vely", String.valueOf(curVel.getYVelocity()));
+                }*/
+                bFV.setCurOffset(positionOffset);
+                bFV.invalidate();
+                //offsetOld = positionOffset;
             }
 
             @Override

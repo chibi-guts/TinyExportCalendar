@@ -157,7 +157,8 @@ public class VerticalViewPager extends ViewGroup {
     /**
      * Determines speed during touch scrolling
      */
-    private VelocityTracker mVelocityTracker;
+    //private VelocityTracker mVelocityTracker;
+    public VelocityTracker mVelocityTracker;
     private int mMinimumVelocity;
     private int mMaximumVelocity;
     private int mFlingDistance;
