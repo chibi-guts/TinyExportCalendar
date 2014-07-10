@@ -61,7 +61,15 @@ public class FragmentMonthView extends Fragment {
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(MyFragment.winWidth, View.MeasureSpec.AT_MOST);
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
         textView.measure(widthMeasureSpec, heightMeasureSpec);
-
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(MyFragment.winWidth/5,0,0,0);
+        monthView.setLayoutParams(lp);
+        LinearLayout.LayoutParams lp1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp1.setMargins(MyFragment.winWidth/5,0,0,0);
+        /*TODO
+            textview margins
+         */
+        textView.setLayoutParams(lp1);
         monthView.setPosition(getArguments().getInt(ARG_SECTION_NUMBER));
         monthView.setNums(fillNums(MyFragment.fragmentsOwnCalendar.getTime()));
         monthView.setDates(dayOfWeek, lastDayNum, maxPrevDay);

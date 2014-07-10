@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="caulis_big">
+        <item>58.571429</item> <item> 919.50504</item> <item> -3.0</item> <item> -45.0</item> <item> -33.100358</item> <item> -60.92612</item> <item> -38.571429</item> <item> -81.42857</item> <item> -10.2856374</item> <item> -38.5447</item> <item> 0.0</item> <item> -82.85714</item> <item> 37.142857</item> <item> -141.42857</item> <item> 37.142857</item> <item> -58.57143</item> <item> -24.285714</item> <item> -110.0</item> <item> -22.857143</item> <item> -175.71429</item> <item> 1.428572</item> <item> -65.71428</item> <item> 24.196774</item> <item> -66.96497</item> <item> 35.714286</item> <item> -90.0</item> <item> 11.428572</item> <item> -22.85715</item> <item> 11.447259</item> <item> -60.12236</item> <item> -11.428571</item> <item> -88.57143</item> <item> -23.757232</item> <item> -29.54521</item> <item> -47.15772</item> <item> -98.77443</item> <item> 9.999999</item> <item> -102.85714</item> <item> 20.000001</item> <item> -1.42857</item> <item> 10.000001</item> <item> 15.71428</item> <item> 10.000001</item> <item> 15.71428 </item>
+    </string-array>
+    <string-array name="caulis_small">
+        <item>60</item> <item>919.50504</item> <item>3.448876</item> <item>-71.67368</item> <item>30.455052</item> <item>-35.75501</item> <item>64.48876</item> <item>-52.78536</item> <item>33.60105</item> <item>-16.81385</item> <item>42.82097</item> <item>-24.79268</item> <item>39.27701</item> <item>-58.56399</item> <item>-2.50308</item> <item>-23.85243</item> <item>-19.41077</item> <item>-37.06416</item> <item>-31.92622</item> <item>-22.83484</item> <item>-5.51041</item> <item>6.26503</item> <item>-2.56885</item> <item>30.34063</item> <item>12.44616</item> <item>21.30475</item> <item>10.65751</item> <item>-6.41359</item> <item>2.74819</item> <item>-15.02103</item> <item>-4.39467</item> <item>-15.02103</item> <item>-7.14285</item> <item>0</item> <item>-6.9197</item> <item>10.56222</item> <item>-3.00072</item> <item>10.25997</item> <item>7.65072</item> <item>-0.59005</item> <item>6.09554</item> <item>-9.85642</item> <item>0.30946</item> <item>-4.04061</item>
+    </string-array>
+    <string-array name="caulis3">
+        <item>32.142857</item> <item>855.93361</item> <item>-5.714286</item> <item>-59.28571</item> <item>27.142857</item> <item>-75</item> <item>44.285715</item> <item>-75.71428</item> <item>17.142857</item> <item>-0.71429</item> <item>17.857142</item> <item>14.28571</item> <item>17.857142</item> <item>14.28571</item>
+    </string-array>
+
+    <string-array name="swirl1">
+        <item>67.142857</item> <item>882.36218</item> <item>14.270846</item> <item>-19.22752</item> <item>26.213183</item> <item>3.35731</item> <item>25.035895</item> <item>8.55656</item> <item>-2.608893</item> <item>11.52165</item> <item>-21.106884</item> <item>8.7299</item> <item>-15.916061</item> <item>-3.31145</item> <item>2.6405</item> <item>-6.12527</item> <item>7.203351</item> <item>-2.26577</item> <item>8.477337</item> <item>0.77248</item> <item>2.430327</item> <item>5.79594</item> <item>-5.086657</item> <item>6.73803</item> <item>-5.043329</item> <item>1.24039</item>
+    </string-array>
+    <string-array name="swirl2">
+        <item>63.63961</item> <item>782.90399</item> <item>8.333759</item> <item>-6.566</item> <item>3.282996</item> <item>-14.39468</item> <item>-1.010152</item> <item>-12.87945</item> <item>-4.293148</item> <item>1.51523</item> <item>-9.091373</item> <item>1.51523</item> <item>-12.374369</item> <item>-2.0203</item> <item>-3.282996</item> <item>-3.53554</item> <item>-1.515229</item> <item>-13.13199</item> <item>8.586297</item> <item>-7.82869</item> <item>10.101525</item> <item>5.30331</item> <item>-0.505076</item> <item>10.35407</item> <item>-5.808377</item> <item>6.566</item> <item>-5.303301</item> <item>-3.78808</item> <item>6.565991</item> <item>-8.83884</item> <item>6.313453</item> <item>-4.04061</item> <item>-0.252538</item> <item>4.79822</item> <item>-2.272843</item> <item>4.54568</item> <item>-3.030458</item> <item>3.03045</item> <item>-0.757614</item> <item>-1.51523</item> <item>0</item> <item>-3.78807</item> <item>0.757615</item> <item>-2.77792</item>
+    </string-array>
+    <string-array name="swirl4">
+        <item>72.857143</item> <item>425.21932</item> <item>20</item> <item>-40</item> <item>31.428567</item> <item>-17.14285</item> <item>27.142857</item> <item>-7.85714</item> <item>-4.285714</item> <item>9.28572</item> <item>-20.714286</item> <item>1.42857</item> <item>-14.285714</item> <item>-4.28571</item> <item>6.428571</item> <item>-5.71429</item> <item>16.428574</item> <item>-2.14286</item> <item>10.714286</item> <item>2.85714</item> <item>-5.714286</item> <item>5</item> <item>-6.428572</item> <item>0</item> <item>-5</item> <item>-2.85714</item>
+    </string-array>
+    <string-array name="swirl3"><item>39.285714</item> <item>557.71932</item> <item>-15</item> <item>-50</item> <item>-40.3571426</item> <item>-12.14285</item> <item>-25.357143</item> <item>-6.42857</item> <item>15</item> <item>5.71429</item> <item>13.571429</item> <item>-6.07143</item> <item>12.5</item> <item>-9.28571</item> <item>-1.071428</item> <item>-3.21429</item> <item>-19.2857138</item> <item>-2.5</item> <item>-11.428571</item> <item>6.07143</item> <item>7.857143</item> <item>8.57143</item> <item>9.285714</item> <item>-5</item> <item>6.785714</item> <item>-4.64286</item> <item>-2.5</item> <item>0.35714</item> <item>-9.285714</item> <item>2.85714</item> <item>-3.571428</item> <item>3.92857</item></string-array>
+
+    <string-array name="buck">
+        <item>24.539528</item> <item>920.25628</item> <item>0</item> <item>0</item> <item>25.58122</item> <item>87.57692</item> <item>32.855339</item> <item>109.69872</item> <item>27.274118</item> <item>12.1218</item> <item>40.58993</item> <item>-0.8263</item> <item>40.58993</item> <item>-0.8263</item> <item>0</item> <item>0</item> <item>13.518863</item> <item>-83.78141</item> <item>17.529733</item> <item>-108.98446</item> <item>-27.060549</item> <item>6.22552</item> <item>-67.853531</item> <item>-7.24438</item> <item>-90.975002</item> <item>0.11204</item>
+    </string-array>
+
+    <string-array name="line1">
+        <item>61.680581</item> <item>1032.455</item> <item>36.428571</item> <item>917.36218</item>
+    </string-array>
+    <string-array name="line2">
+        <item>68.928572</item> <item>1033.0765</item> <item>53.214286</item> <item>917.71933</item>
+    </string-array>
+    <string-array name="line3">
+        <item>73.571429</item> <item>1033.7908</item> <item>68.214286</item> <item>918.79075</item>
+    </string-array>
+    <string-array name="line4">
+        <item>80.714286</item> <item>1034.1479</item> <item>79.642858</item> <item>920.21933</item>
+    </string-array>
+    <string-array name="line5">
+        <item>90.000001</item> <item>920.93361</item> <item>87.142858</item> <item>1034.505</item>
+    </string-array>
+    <string-array name="line6">
+        <item>105</item> <item>921.6479</item> <item>93.214286</item> <item>1033.0765</item>
+    </string-array>
+
+    <string-array name="leaf1">
+        <item>68.690373</item> <item> 653.09939</item> <item> 1.262691</item> <item> -33.58757</item> <item> 12.374369</item> <item> -30.30458</item> <item> 15.909903</item> <item> -34.85026</item> <item> 24.895684</item> <item> -17.73124</item> <item> 37.698664</item> <item> 20.92238</item> <item> 36.112954</item> <item> 35.60787</item> <item> -2.52539</item> <item> -7.07106</item> <item> -7.57615</item> <item> -8.33376</item> <item> -7.57615</item> <item> -8.33376</item> <item> -11.61675</item> <item> -5.80837</item> <item> -27.274113</item> <item> -10.10152</item> <item> -28.536804</item> <item> -27.27411</item> <item> 15.152289</item> <item> -0.50507</item> <item> 17.930204</item> <item> 7.07107</item> <item> 17.930204</item> <item> 7.07107</item>
+    </string-array>
+    <string-array name="leaf2">
+        <item>136.27601</item> <item> 861.32351</item> <item> 18.24292</item> <item> -5.53878</item> <item> 19.17783</item> <item> 15.89866</item> <item> 16.11882</item> <item> 19.26352</item> <item> 15.79304</item> <item> 17.58186</item> <item> 1.53393</item> <item> 33.22628</item> <item> -12.23148</item> <item> 40.63345</item> <item> -0.004</item> <item> -19.44398</item> <item> -8.78903</item> <item> -20.37502</item> <item> 12.48402</item> <item> -41.39106</item> <item> 5.41593</item> <item> 16.15713</item> <item> -2.09645</item> <item> 19.86798</item> <item> -2.09645</item> <item> 19.86798</item>
+    </string-array>
+    <string-array name="leaf3">
+        <item>91.901533</item> <item>787.04637</item> <item>2.585555</item> <item>3.80513</item> <item>1.976684</item> <item>8.65692</item> <item>1.976684</item> <item>8.65692</item> <item>15.793043</item> <item>17.58186</item> <item>3.806773</item> <item>38.0245</item> <item>-9.958637</item> <item>45.43167</item> <item>1.763767</item> <item>-27.77773</item> <item>-11.061873</item> <item>-25.17324</item> <item>10.211177</item> <item>-46.18928</item> <item>5.41593</item> <item>16.15713</item> <item>-9.167518</item> <item>44.86926</item> <item>-9.167518</item> <item>44.86926</item>
+    </string-array>
+    <string-array name="leaf4">
+        <item>50.002551</item> <item>706.89001</item> <item>14.89975</item> <item>-24.74873</item> <item>-5.303301</item> <item>-52.14912</item> <item>-11.869292</item> <item>-52.02286</item> <item>2.083667</item> <item>7.02829</item> <item>-5.603801</item> <item>12.46467</item> <item>-14.187643</item> <item>11.14232</item> <item>-10.829495</item> <item>-1.6683</item> <item>-12.798043</item> <item>-5.67314</item> <item>-23.24927767</item> <item>-10.25689</item> <item>12.59240967</item> <item>-9.13442</item> <item>33.34805067</item> <item>-20.6818</item> <item>37.43692067</item> <item>-0.88543</item> <item>-5.96418</item> <item>-3.3342</item> <item>-17.930208</item> <item>-0.75761</item> <item>-17.930208</item> <item>-0.75761</item>
+    </string-array>
+    <string-array name="leaf5">
+        <item>54.033367</item> <item>452.18972</item> <item>15</item> <item>-30</item> <item>-0.649397</item> <item>-40.6556</item> <item>-12.649397</item> <item>-42.6556</item> <item>-5</item> <item>-25</item> <item>-12.69894</item> <item>-23.3343</item> <item>-27.979461</item> <item>-29.29226</item> <item>-2.134509</item> <item>13.84385</item> <item>9.516614</item> <item>40.19356</item> <item>27.726923</item> <item>29.5448</item> <item>-10.560218</item> <item>-8.15755</item> <item>-16.860648</item> <item>-14.02342</item> <item>-16.860648</item> <item>-14.02342</item>
+    </string-array>
+    <array name="leafs">
+        <item>@array/leaf1</item>
+        <item>@array/leaf2</item>
+        <item>@array/leaf3</item>
+        <item>@array/leaf4</item>
+        <item>@array/leaf5</item>
+    </array>
+
+    <array name="simple_path">
+        <item>@array/caulis_big</item>
+        <item>@array/caulis_small</item>
+        <item>@array/caulis3</item>
+        <item>@array/buck</item>
+        <item>@array/swirl1</item>
+        <item>@array/swirl2</item>
+        <item>@array/swirl3</item>
+        <item>@array/swirl4</item>
+    </array>
+
+    <array name="lines">
+        <item>@array/line1</item>
+        <item>@array/line2</item>
+        <item>@array/line3</item>
+        <item>@array/line4</item>
+        <item>@array/line5</item>
+        <item>@array/line6</item>
+    </array>
+
+</resources>

@@ -30,6 +30,7 @@ public class MonthView extends View {
     float rWidth=70, rHeigth=100, left = 10, top = 10;
     int [] markingColors = new int[4];
     int [] greenColors = new int[2];
+    private Set<Integer> flowY = new HashSet<Integer>();
 
     public MonthView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -114,6 +115,7 @@ public class MonthView extends View {
                                 color = markingColors[t];
                                 mark = 0;
                                 filled=1;
+                                flowY.add(i);
                             }
                             else {
                                 mark = 1;
@@ -199,5 +201,9 @@ public class MonthView extends View {
     int dayOfMonthSelector(int flag) {
         if(Math.abs(flag) == 1)    return 1;
         else return 0;
+    }
+
+    Set<Integer> getFlowY () {
+        return flowY;
     }
 }

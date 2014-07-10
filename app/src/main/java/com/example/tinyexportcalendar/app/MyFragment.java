@@ -84,7 +84,7 @@ public class MyFragment extends Fragment {
         verticalViewPager.setAdapter(dAdapter);
         verticalViewPager.setOffscreenPageLimit(1);
         verticalViewPager.setPageMargin(16);
-        verticalViewPager.setPageMarginDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_green_dark)));
+        //verticalViewPager.setPageMarginDrawable(new ColorDrawable(getResources().getColor(android.R.color.holo_green_dark)));
         verticalViewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
             @Override
             public void transformPage(View view, float position) {
@@ -137,6 +137,7 @@ public class MyFragment extends Fragment {
                     Log.d("MyFragment onPageScrolled offsetpx vely", String.valueOf(curVel.getYVelocity()));
                 }*/
                 bFV.setCurOffset(positionOffset);
+                bFV.setCoords(((FragmentMonthView)dAdapter.mFragments.get(position)).monthView.getFlowY());
                 bFV.invalidate();
                 //offsetOld = positionOffset;
             }
