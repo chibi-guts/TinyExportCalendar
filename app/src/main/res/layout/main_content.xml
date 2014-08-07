@@ -21,8 +21,8 @@
         tools:ignore="MergeRootFrame">
         <com.example.tinyexportcalendar.app.VerticalViewPager
             android:id="@+id/verticalviewpager"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </FrameLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,8 +30,7 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:id="@+id/buttons_container"
-        android:layout_below="@id/container"
-        android:layout_alignBottom="@id/container">
+        android:layout_below="@id/container">
         <ImageButton
             android:id="@+id/colbut1"
             android:layout_width="wrap_content"

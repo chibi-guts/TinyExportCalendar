@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import java.text.SimpleDateFormat;
@@ -77,6 +78,11 @@ public class MyFragment extends Fragment {
         colBtns[3] = (ImageButton) view.findViewById(R.id.colbut4);
         setButtons();
 
+        //FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        FrameLayout fr = (FrameLayout) view.findViewById(R.id.container);
+        fr.getLayoutParams().height = (int) (winHeight/15)*8+5*6+10;
+        fr.getLayoutParams().width = (int) (winWidth/10)*7+5*6;
+
         final BorderFlowerView bFV = (BorderFlowerView) view.findViewById(R.id.fl_view);
 
         final VerticalViewPager verticalViewPager = (VerticalViewPager) view.findViewById(R.id.verticalviewpager);
@@ -104,7 +110,6 @@ public class MyFragment extends Fragment {
                     } else {
                         view.setTranslationY(-vertMargin + horzMargin / 2);
                     }
-
                     view.setScaleX(scaleFactor);
                     view.setScaleY(scaleFactor);
 
