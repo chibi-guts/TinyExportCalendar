@@ -45,8 +45,6 @@ public class MainActivity extends ActionBarActivity {
         mainFragmentManager = getFragmentManager();
         fr = (MyFragment) getFragmentManager().findFragmentById(R.id.main_content_frag);
 
-
-
         mPlanetTitles = getResources().getStringArray(R.array.planets_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);

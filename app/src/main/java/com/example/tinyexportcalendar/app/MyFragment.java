@@ -5,8 +5,9 @@ import android.app.FragmentManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -16,7 +17,7 @@ import android.view.LayoutInflater;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,7 +34,7 @@ public class MyFragment extends Fragment {
     static int MARK_SEX_ON = 0;
     static int[] markingColors = new int[3];
     static int curMarkingColor = 0;
-    Button[] colBtns = new Button[4];
+    ImageButton [] colBtns = new ImageButton[4];
     static int currentPosition;
     float MIN_SCALE = 0.9f,  MIN_ALPHA = 0.7f;
     static int YEAR_MIN = 2013; //1970
@@ -70,10 +71,10 @@ public class MyFragment extends Fragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         winHeight = displaymetrics.heightPixels;
         winWidth = displaymetrics.widthPixels;
-        colBtns[0] = (Button) view.findViewById(R.id.colbut1);
-        colBtns[1] = (Button) view.findViewById(R.id.colbut2);
-        colBtns[2] = (Button) view.findViewById(R.id.colbut3);
-        colBtns[3] = (Button) view.findViewById(R.id.colbut4);
+        colBtns[0] = (ImageButton) view.findViewById(R.id.colbut1);
+        colBtns[1] = (ImageButton) view.findViewById(R.id.colbut2);
+        colBtns[2] = (ImageButton) view.findViewById(R.id.colbut3);
+        colBtns[3] = (ImageButton) view.findViewById(R.id.colbut4);
         setButtons();
 
         final BorderFlowerView bFV = (BorderFlowerView) view.findViewById(R.id.fl_view);
@@ -204,17 +205,30 @@ public class MyFragment extends Fragment {
     }
 
     void setButtons(){
-        //Log.d("MyFragment setButons",String.valueOf(colBtns.length));
-        //Log.d("MyFragment setButons",String.valueOf(colBtns[0].getId()));
         for(int i=0; i < colBtns.length; i++){
             colBtns[i].setOnClickListener(new OnColorsClickListner());
-            if(i<colBtns.length-1)  colBtns[i].setBackgroundColor(markingColors[i]);
             Log.d("MyFragment winWidth", String.valueOf(winWidth));
-            colBtns[i].setWidth((int)winWidth/10);
-            colBtns[i].setHeight((int) winWidth/10);
+
+            int col = markingColors[0];
+            if(i!=3)    col = markingColors[i];
+            colBtns[i].setImageDrawable(drawBtn(i, col, 50f));
         }
-        colBtns[3].setBackground(symbolDrawable(winWidth/10));
-        //colBtns[3].setBackgroundColor(Color.WHITE);
+    }
+
+    BitmapDrawable drawBtn(int id, int color, float width){
+        DrawingHelper dh = new DrawingHelper(17, 17, 17, 0, 0);
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(color);
+        Path path = dh.generateComplexPath(dh.parseFloatArray(
+                getResources().getStringArray((
+                        getResources().obtainTypedArray(R.array.btns)).getResourceId(id, id))), 1, 0);
+        path.setFillType(Path.FillType.WINDING);
+        Bitmap myBitmap = Bitmap.createBitmap((int)width, (int)width, Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(myBitmap);
+        canvas.drawPath(path, paint);
+        BitmapDrawable bd = new BitmapDrawable(getResources(), myBitmap);
+        return bd;
     }
 
     Drawable symbolDrawable(float width){
@@ -241,4 +255,6 @@ public class MyFragment extends Fragment {
             if(view == colBtns[3])  MARK_SEX_ON = 1;
         }
     }
+
+
 }
